@@ -98,6 +98,7 @@ class _MemoramaScreenState extends State<MemoramaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -197,6 +198,87 @@ class _MemoramaScreenState extends State<MemoramaScreen> {
               ),
             ],
           ),
+=======
+      body: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.arrow_back),
+                    onPressed: showPasswordDialog,
+                  ),
+                  const Expanded(
+                    child: Text(
+                      'Memorama para Adultos Mayores',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const SizedBox(width: 48),
+                ],
+              ),
+            ),
+            if (allRevealed)
+              Column(
+                children: [
+                  const Icon(Icons.celebration, size: 80, color: Colors.orange),
+                  const Text(
+                    '¡Felicidades, encontraste todas las parejas!',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    onPressed: resetGame,
+                    child: const Text('Jugar de nuevo'),
+                  ),
+                ],
+              ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                  ),
+                  itemCount: cards.length,
+                  itemBuilder: (context, index) {
+                    final isRevealed =
+                        revealed[index] ||
+                        index == firstIndex ||
+                        index == secondIndex;
+                    return GestureDetector(
+                      onTap: () => onCardTap(index),
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 300),
+                        decoration: BoxDecoration(
+                          color: isRevealed
+                              ? Colors.white
+                              : Colors.blue.shade300,
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(color: Colors.black26),
+                        ),
+                        alignment: Alignment.center,
+                        child: Text(
+                          isRevealed ? cards[index] : '?',
+                          style: const TextStyle(fontSize: 36),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+          ],
+>>>>>>> 843e62b68c3ffb619663bd11e1d7194fd0185c0f
         ),
       ),
     );

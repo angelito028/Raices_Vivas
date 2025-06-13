@@ -53,11 +53,24 @@ class _Evaluacion2State extends State<Evaluacion2> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: const Text(''),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context); // Regresa a la pantalla anterior
+=======
+        backgroundColor: const Color(0xffc3b09a),
+        title: const Text(
+          'Test de Pfeiffer',
+          style: TextStyle(color: Colors.black, fontFamily: 'Comic Sans MS'),
+        ),
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+>>>>>>> 843e62b68c3ffb619663bd11e1d7194fd0185c0f
           },
         ),
       ),

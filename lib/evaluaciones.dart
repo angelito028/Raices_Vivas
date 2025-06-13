@@ -3,15 +3,19 @@ import 'package:flutter/material.dart';
 class EvaluacionesScreen extends StatelessWidget {
   const EvaluacionesScreen({super.key});
 
+<<<<<<< HEAD
   final List<Color> _cardColors = const [
     Color(0xff89abe5),
     Color(0xffcdd9ff),
   ];
 
+=======
+>>>>>>> 843e62b68c3ffb619663bd11e1d7194fd0185c0f
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         backgroundColor: const Color(0xFFf5e9dc),
         elevation: 0,
         title: const Text(''),
@@ -50,11 +54,30 @@ class EvaluacionesScreen extends StatelessWidget {
               ),
             ],
           ),
+=======
+        backgroundColor: const Color(0xffc3b09a),
+        title: const Center(
+          child: Text(
+            'Evaluaciones',
+            style: TextStyle(color: Colors.black, fontFamily: 'Comic Sans MS'),
+          ),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            _buildShadowedOvalButton(context, 'Evaluación 1', "/evaluacion1"),
+            _buildShadowedOvalButton(context, 'Evaluación 2', "/evaluacion2"),
+          ],
+>>>>>>> 843e62b68c3ffb619663bd11e1d7194fd0185c0f
         ),
       ),
     );
   }
 
+<<<<<<< HEAD
   Widget _buildStyledCardButton({
     required BuildContext context,
     required String label,
@@ -117,6 +140,51 @@ class EvaluacionesScreen extends StatelessWidget {
                     color: Colors.black54),
               ),
             ],
+=======
+  Widget _buildShadowedOvalButton(
+    BuildContext context,
+    String label,
+    String routeName,
+  ) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 12.0),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(35),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black26,
+              offset: Offset(0, 4),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(35),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xff89abe5),
+              fixedSize: const Size(250, 70),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(35),
+              ),
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, routeName);
+            },
+            child: Center(
+              child: Text(
+                label,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  color: Color(0xff110e0e),
+                  fontSize: 20,
+                  fontFamily: 'Comic Sans MS',
+                ),
+              ),
+            ),
+>>>>>>> 843e62b68c3ffb619663bd11e1d7194fd0185c0f
           ),
         ),
       ),

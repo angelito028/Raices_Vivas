@@ -17,6 +17,7 @@ import './juegos.dart';
 import './evaluacion2.dart';
 import './memorama.dart';
 
+<<<<<<< HEAD
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
@@ -25,6 +26,10 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const RaicesVivas());
+=======
+void main() {
+  runApp(RaicesVivas());
+>>>>>>> 843e62b68c3ffb619663bd11e1d7194fd0185c0f
 }
 
 class RaicesVivas extends StatelessWidget {
@@ -37,7 +42,10 @@ class RaicesVivas extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.green),
       routes: {
         "/login": (context) => const LoginScreen(),
+<<<<<<< HEAD
         "/home": (context) => Principal(),
+=======
+>>>>>>> 843e62b68c3ffb619663bd11e1d7194fd0185c0f
         "/principal": (context) => Principal(),
         "/gericultura": (context) => GericulturaScreen(),
         "/calculadoras": (context) => Calculadoras(),
@@ -52,7 +60,12 @@ class RaicesVivas extends StatelessWidget {
         "/evaluacion2": (context) => Evaluacion2(),
         "/juegos": (context) => const JuegosScreen(),
         "/memorama": (context) => const MemoramaScreen(),
+<<<<<<< HEAD
         "/sopa_letras": (context) => const SopaDeLetras(),
+=======
+        "/sopa_letras": (context) => const SopaDeLetrasScreen(),
+        "/boton": (context) => BotonScreen(),
+>>>>>>> 843e62b68c3ffb619663bd11e1d7194fd0185c0f
       },
       home: Bienvenida(),
     );

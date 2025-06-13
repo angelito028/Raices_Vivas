@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:raices_vivas/bd_raices.dart';
+=======
+>>>>>>> 843e62b68c3ffb619663bd11e1d7194fd0185c0f
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -15,7 +18,27 @@ class _RegisterScreenState extends State<RegisterScreen> {
       TextEditingController();
   String? _errorMessage;
 
+<<<<<<< HEAD
   BdRaicesVivas _bdRaices = BdRaicesVivas();
+=======
+  void _validateAndRegister() {
+    setState(() {
+      if (_emailController.text.isEmpty ||
+          _passwordController.text.isEmpty ||
+          _confirmPasswordController.text.isEmpty) {
+        _errorMessage = 'Por favor, completa todos los campos.';
+      } else if (_passwordController.text != _confirmPasswordController.text) {
+        _errorMessage = 'Las contraseñas no coinciden.';
+      } else {
+        _errorMessage = null;
+        Navigator.pushNamed(
+          context,
+          "/home",
+        ); // Cambia según tu flujo de navegación
+      }
+    });
+  }
+>>>>>>> 843e62b68c3ffb619663bd11e1d7194fd0185c0f
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +76,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               SizedBox(height: 20),
               ElevatedButton(
+<<<<<<< HEAD
                 onPressed: () async {
                   String correo = _emailController.text.trim();
                   String contrasenia = _passwordController.text.trim();
@@ -89,6 +113,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ));
                   }
                 },
+=======
+                onPressed: _validateAndRegister,
+>>>>>>> 843e62b68c3ffb619663bd11e1d7194fd0185c0f
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xffc6d8f8),
                   padding: EdgeInsets.symmetric(vertical: 16, horizontal: 40),
