@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "974146683624",
+    "project_id": "raices-vivas-7ad92",
+    "storage_bucket": "raices-vivas-7ad92.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974146683624:android:8d2deb051f66f601ab3f5d",
+        "android_client_info": {
+          "package_name": "com.example.raices_vivas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyA-bEJjjaREQI8v3NuYSPQtmYrE7uFcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
